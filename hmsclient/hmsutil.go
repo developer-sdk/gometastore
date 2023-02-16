@@ -121,6 +121,8 @@ func (tb *TableBuilder) WithParameters(parameters map[string]string) *TableBuild
 
 // WithType specifies table type
 func (tb *TableBuilder) WithType(t TableType) *TableBuilder {
+	tb.Type = t
+	
 	if t == TableTypeExternal {
 		tb.AsExternal()
 	}
